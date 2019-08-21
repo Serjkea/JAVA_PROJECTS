@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="387.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ListView fx:id="task_list" layoutX="14.0" layoutY="94.0" prefHeight="133.0" prefWidth="231.0" />
+      <Label layoutX="85.0" prefHeight="62.0" prefWidth="243.0" text="Task Manager">
+         <font>
+            <Font name="AR ESSENCE" size="46.0" />
+         </font>
+      </Label>
+      <Button fx:id="perform_task" layoutX="267.0" layoutY="129.0" mnemonicParsing="false" onAction="#performTask" prefHeight="25.0" prefWidth="91.0" text="Perform" />
+      <Button fx:id="delete_task" layoutX="266.0" layoutY="262.0" mnemonicParsing="false" onAction="#deleteTask" prefHeight="25.0" prefWidth="91.0" text="Delete" />
+      <Button fx:id="delete_all_tasks" layoutX="266.0" layoutY="297.0" mnemonicParsing="false" onAction="#deleteAllTasks" prefHeight="25.0" prefWidth="91.0" text="Delete All" />
+      <Button fx:id="new_task" layoutX="267.0" layoutY="94.0" mnemonicParsing="false" onAction="#showAddNewTaskForm" prefHeight="25.0" prefWidth="91.0" text="New Task" />
+      <Button fx:id="close" layoutX="266.0" layoutY="363.0" mnemonicParsing="false" onAction="#closeTaskManager" prefHeight="25.0" prefWidth="91.0" text="Close" />
+      <Label layoutX="14.0" layoutY="232.0" prefHeight="17.0" prefWidth="231.0" text="Description" />
+      <Label layoutX="14.0" layoutY="77.0" prefHeight="17.0" prefWidth="231.0" text="Task List" />
+      <TextArea fx:id="description" editable="false" layoutX="14.0" layoutY="255.0" prefHeight="133.0" prefWidth="231.0" />
+      <CheckBox fx:id="active_tasks" layoutX="266.0" layoutY="170.0" mnemonicParsing="false" onAction="#showChange" text="active tasks" />
+      <CheckBox fx:id="completed_tasks" layoutX="266.0" layoutY="196.0" mnemonicParsing="false" onAction="#showChange" text="completed tasks" />
+   </children>
+</Pane>
