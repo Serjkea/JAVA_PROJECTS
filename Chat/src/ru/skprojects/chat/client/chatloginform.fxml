@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="189.0" prefWidth="282.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btnOK" layoutX="234.0" layoutY="151.0" mnemonicParsing="false" text="OK" onAction="#onButtonClick" />
+      <Label layoutX="10.0" layoutY="60.0" text="Login" />
+      <Label layoutX="10.0" layoutY="96.0" text="Password" />
+      <TextField fx:id="loginField" layoutX="68.0" layoutY="56.0" />
+      <TextField fx:id="passwordField" layoutX="68.0" layoutY="92.0" />
+      <Label fx:id="loginText" layoutX="76.0" layoutY="7.0" text="Please login">
+         <font>
+            <Font name="AR CHRISTY" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="127.0" text="Repeat your password" />
+      <TextField fx:id="repeatPasswordField" layoutX="68.0" layoutY="151.0" />
+   </children>
+</Pane>
