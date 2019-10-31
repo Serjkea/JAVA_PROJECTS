@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Worried mommy's blog</title>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="baby"/>
+    <meta name="description" content="Description of page"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" >
+</head>
+<body>
+
+<nav class="navbar fixed-top sticky-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/" th:method="GET">Worried mommy's blog</a>
+</nav>
+
+<div class="container p-5">
+    <form method="POST">
+        <div class="form-group" style="width: 10rem;">
+            <label>Title</label>
+            <input type="text" class="form-control" th:name="title" placeholder="Title">
+        </div>
+        <div class="form-group" style="width: 10rem;">
+            <label>Image</label>
+            <input type="text" class="form-control" th:name="image" placeholder="Image">
+        </div>
+        <div class="form-group" style="width: 25rem;">
+            <label>Message</label>
+            <textarea type="text" class="form-control" th:name="message" placeholder="Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+
+</div>
+
+<div class="container-fluid bg-light">
+    <div class="row align-items-end p-5">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <p class="text-center">
+                <script>
+                    document.write("Copyright &copy; "+ new Date().getFullYear()+ " All rights reserved.");
+                </script>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+</body>
+</html>
