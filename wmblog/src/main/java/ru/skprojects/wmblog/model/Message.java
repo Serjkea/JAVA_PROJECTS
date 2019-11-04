@@ -1,7 +1,7 @@
 package ru.skprojects.wmblog.model;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 @Table(name="messages")
@@ -22,6 +22,14 @@ public class Message {
 
     @Column(name = "image")
     private String image;
+
+    public Message() {}
+
+    public Message(String title, String text, String image) {
+        this.title = title;
+        this.text = text;
+        this.image = image;
+    }
 
     public void setDate(Date date) {
         this.date = date;
@@ -72,6 +80,13 @@ public class Message {
             }
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return this.title + " " +
+               this.image + " " +
+               this.text;
     }
 
 }

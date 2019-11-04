@@ -11,15 +11,25 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value="/contacts")
 public class ContactsController {
 
+    private String name;
+    private String email;
+    private String message;
+
     @GetMapping
     public ModelAndView contacts() {
         return new ModelAndView("contacts");
     }
 
     @PostMapping
-    public ModelAndView send(@RequestParam(name="name") String name, @RequestParam(name="email") String email, @RequestParam(name="message") String message) {
-
+    public ModelAndView send(@RequestParam(value="name") String name, @RequestParam(value="email") String email, @RequestParam(value="message") String message) {
+        this.name = name;
+        this.email = email;
+        this.message = message;
         return new ModelAndView("contacts","status","OK");
+    }
+
+    public String getContactInfo() {
+        return this.name + " " + this.email + " " + this.message;
     }
 
 }
